@@ -9,6 +9,9 @@ public class practice1 {
         secondlargest();
         System.out.println();
         thirdlargest();
+        System.out.println();
+        maxrepeateelements();
+        System.out.println();
 
 
     }
@@ -78,5 +81,26 @@ public class practice1 {
         System.out.println("forst largest element is : "+largest);
         System.out.println("Seocnd largest element is : "+secondlargest);
         System.out.println("Third largest element is : "+thirdlargest);
+    }
+
+    public static void maxrepeateelements(){
+        int[] arr ={1,1,2,2,3,3,4,4,5,6,6,6};
+        int n=arr.length;
+        int max=0;
+        int maxelement=0;
+        for(int i=0;i<n;i++){
+            int count=0;
+            for(int j=0;j<n;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                }
+            }
+            if(count>max){
+                max=count;
+                maxelement=arr[i];
+            }
+            
+        }
+        System.out.println(maxelement+" is maximum element and repeat in "+ max);
     }
 }
